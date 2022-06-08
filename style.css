@@ -1,0 +1,104 @@
+body{
+    background-color: #21262C;
+    
+}
+html{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.svgWrapper{
+    
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+}
+.svgWrapper p{
+    
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 0;
+    bottom: 0;
+    
+}
+svg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.corner4{
+
+    transform: translate(-20px,20px);
+    
+pointer-events: none;
+    transition: all 200ms;
+}
+.corner3{
+
+    transform: translate(20px,-20px);
+    
+    pointer-events: none;
+    transition: all 200ms;
+}
+.corner2{
+
+    transform: translate(-20px,-20px);
+    
+    pointer-events: none;
+    transition: all 200ms;
+}
+.corner1{
+
+    transform: translate(20px,20px);
+    
+    pointer-events: none;
+    transition: all 200ms;
+}
+
+.yellowBorder{
+    opacity: 0;
+    transform-origin: center;
+    transition: all 400ms;
+}
+.svgWrapper:hover .yellowBorder{
+    opacity: 1;
+}
+
+.svgWrapper:hover .corner4{
+opacity: 1;
+transform: translate(0,0);
+pointer-events: auto;
+}
+.svgWrapper:hover .corner3{
+    pointer-events: auto;
+opacity: 1;
+transform: translate(0,0);
+
+}
+.svgWrapper:hover .corner2{
+    pointer-events: auto;
+opacity: 1;
+transform: translate(0,0);
+
+}
+.svgWrapper:hover .corner1{
+    pointer-events: auto;
+opacity: 1;
+transform: translate(0,0);
+
+}
